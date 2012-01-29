@@ -1,0 +1,13 @@
+<p>
+  <b>Comment:</b>
+  <%=h @notes.comment %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%=h @notes.job %>
+</p>
+
+
+<%= link_to 'Edit', edit_notes_path(@notes) %> |
+<%= link_to 'Back', notes_path %>

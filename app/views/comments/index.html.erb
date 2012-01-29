@@ -1,0 +1,22 @@
+<h1>Listing comments</h1>
+
+<table>
+  <tr>
+    <th>Recipe</th>
+    <th>Description</th>
+  </tr>
+
+<% for comment in @comments %>
+  <tr>
+    <td><%=h comment.recipe %></td>
+    <td><%=h comment.description %></td>
+     <td><%= link_to 'Show', [@recipe, comment] %></td>
+    <td><%= link_to 'Edit', [:edit, @recipe, comment] %></td>
+    <td><%= link_to 'Destroy', [@recipe, comment], 
+      :confirm => 'Are you sure?', :method => :delete %></td> </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New comment', new_recipe_comment_path(@recipe) %>

@@ -1,0 +1,12 @@
+Recipe:
+//1. Get trac working
+
+//3. Change header background to olivey green
+4. list and new recipe text are hard to read
+rich text
+printing feature gurky
+comment box is too big (that's what she said)
+//searching before loading makes it blow up (that's what she said)
+
+Others:
+Write a program to bookmark craigslist.

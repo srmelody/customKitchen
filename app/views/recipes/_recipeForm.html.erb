@@ -1,0 +1,16 @@
+<% form_for(@recipe) do |f| %>
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+   
+	 <%= fckeditor_textarea( :recipe, :description, :height => '420' ) %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>

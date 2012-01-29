@@ -1,0 +1,17 @@
+<!-- app/views/comments/_comment.html.erb -->
+<% form_for([@recipe, @comment]) do |f| %>
+  <p>
+    <b>Body</b><br />
+		 <%= fckeditor_textarea( :comment, 
+
+:description, :toolbarSet => 'Simple', :height => '200' ) %>
+
+  </p>
+<br />
+    <%= f.hidden_field :recipe_id,  :value => @recipe.id %>
+  </p>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

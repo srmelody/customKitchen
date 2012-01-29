@@ -1,0 +1,7 @@
+<h1>Search past entries</h1>
+<% form_for :recipe, :url=>{} do |form| %>
+    <%= text_field_with_auto_complete :recipe, :description %> 
+    <%= submit_tag "view entry" %>
+<% end %>
+
+  <%= text_field_with_auto_complete :recipe, :description %> 

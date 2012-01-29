@@ -1,0 +1,32 @@
+<%= link_to 'Edit', { :action => 'edit', :id => @recipe } %>
+<p>
+	
+
+  <h1><%=h @recipe.title %></h1>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @recipe.description %>
+</p>
+
+<%= render :partial => "ratings/rate",  :locals => { :recipe => @recipe } %>
+
+<% unless @recipe.comments.empty? %>
+  <h3>Comments</h3>
+  <% @recipe.comments.each do |comment| %>
+  <hr>
+  Posted on <%= h comment.created_at%> <%= link_to 'Edit', edit_recipe_comment_path( @recipe, comment ) %>
+  <p><%=  comment.description %></p>
+  
+  <% end %>
+<% end %>
+
+<!-- #2 -->
+<h3>New Comment</h3>
+<%= render :partial => @comment = Comment.new, 
+   :locals => { :button_name => 'Create'}%>
+
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

@@ -1,0 +1,55 @@
+body {
+	
+}
+#banner {
+background: olivedrab;/*#0099cc;*/
+padding-top: 10px;
+padding-bottom: 20px;
+border-bottom: 4px solid;
+/* font: small-caps 50px/50px "Times New Roman", serif; */
+font: small-caps 50px/50px serif;
+color: #000080;
+text-align: center;
+}
+
+#leftbar {
+	float:left;
+padding-top: 1em;
+padding-left: 1em;
+padding-bottom: 1em;
+width: 10em;
+background: blueViolet;
+}
+#main {
+margin-left: 12em;
+padding-top: 0ex;
+padding-left: 2em;
+background: white;
+}
+#columns {
+background: #9999ff;
+}
+#menubar {
+background: Purple;
+padding-top: 15px;
+padding-bottom: 25px;
+border-bottom: 4px ridge;
+/* font: small-caps 50px/50px "Times New Roman", serif; */
+font: small-caps 15px/15px serif;
+color: #000090;
+text-align: center;
+}
+
+#headerCell {
+	float: left;
+	text-align:left;
+	padding-left: 10px;
+		padding-right: 10px;
+	color: black;
+}
+
+#searchCell {
+	float: right;
+	padding-left: 10px;
+	
+}

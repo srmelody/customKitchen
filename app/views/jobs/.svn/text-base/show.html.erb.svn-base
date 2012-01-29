@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @job.title %>
+</p>
+
+<p>
+  <b>Appliedto:</b>
+  <%=h @job.appliedTo %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @job.url %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @job.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

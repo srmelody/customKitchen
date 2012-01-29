@@ -1,0 +1,9 @@
+<div id="headerCell"><%= link_to  'New Recipe', { :action => 'new', :controller => :recipes } %></td></div>
+<div id="headerCell"><%= link_to  'List Recipes', { :action => 'index', :controller => :recipes } %></td></div>
+<div id="searchCell">
+ <% form_for :recipe, :url=>{ :action => 'search' } do |form| %>
+    <%= text_field_with_auto_complete :recipeSearch, :description %> 
+    <%= submit_tag "Search" %>
+<% end %>
+</div>
+	
