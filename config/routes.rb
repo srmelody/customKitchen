@@ -1,6 +1,24 @@
 Kitchen::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
+resources :recipes
+
+resources :categories
+
+resources :notes
+
+ resources :jobs
+
+ resources :statuses
+
+resources :ratings
+
+   resources :search
+
+  #map.resources :comments
+# map.root :controller => 'recipes'
+ resources :recipes, :has_many => :comments
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

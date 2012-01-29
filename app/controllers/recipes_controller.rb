@@ -91,21 +91,8 @@ class RecipesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-  # def auto_complete_for_recipe_description
-  #search = params[:recipe][:description]
-  #recipes = Recipe.search(search) unless search.blank?
-  #render :partial => "live/search" 
-  #end
-  def auto_complete_for_recipeSearch_description
-    criteria = '%' + params[:recipeSearch][:description] + '%'
-    @recipes = Recipe.find(:all, 
-                           :conditions=>["title like ? OR description like ?",criteria, criteria],
-    :order=>'title desc', :limit=>10)
-    render :partial=> "recipes" 
-  end
-  
-  def search
+ 
+ def search
     
     unless params[:recipeSearch].nil?
       @recipe = Recipe.find_by_title(params[:recipeSearch][:description])
@@ -128,4 +115,19 @@ class RecipesController < ApplicationController
       
     end
   end
+ 
+  # def auto_complete_for_recipe_description
+  #search = params[:recipe][:description]
+  #recipes = Recipe.search(search) unless search.blank?
+  #render :partial => "live/search" 
+  #end
+  def auto_complete_for_recipeSearch_description
+    criteria = '%' + params[:recipeSearch][:description] + '%'
+    @recipes = Recipe.find(:all, 
+                           :conditions=>["title like ? OR description like ?",criteria, criteria],
+    :order=>'title desc', :limit=>10)
+    render :partial=> "recipes" 
+  end
+  
+ 
 end
