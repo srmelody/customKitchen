@@ -1,7 +1,0 @@
-<h1>New recipe</h1>
-
-<%= error_messages_for :recipe %>
-
-<%= render :partial => 'recipeForm' %>
-
-<%= link_to 'Back', recipes_path %>
